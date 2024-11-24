@@ -16,8 +16,8 @@ def energias_vazao_rendimentos(
     y = ypa - Ep
 
     #Vazao volumetrica do ar
-    area = ((d_ext/2)**2 - (d_int/2)**2)
-    q_ponto = area * np.pi * input.c4 * np.cos(np.deg2rad(beta4))
+    area = ((d_ext/2)**2 - (d_int/2)**2) * np.pi
+    q_ponto = area * input.c4 * np.cos(np.deg2rad(beta4))
 
     # Vaxao massica do ar
     m_ponto = rho * area * input.c4 * np.cos(np.deg2rad(beta4))
@@ -41,7 +41,7 @@ def energias_vazao_rendimentos(
     n_a = ((y + Ep) * (m_ponto + mponto_f)) / (((y + Ep) * (m_ponto + mponto_f)) + Pa)
 
     # Potencia interna
-    Pi =  ((y - Ep) * (m_ponto + mponto_f)) + Pa
+    Pi =  ((y + Ep) * (m_ponto + mponto_f)) + Pa
 
     # Rendimento interno
     n_i = P / Pi

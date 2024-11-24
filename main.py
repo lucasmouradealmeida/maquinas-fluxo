@@ -39,7 +39,7 @@ result_velocidades = velocidades_angulos(n, d_ext, d_int, alpha4, beta4, beta5)
 print(result_velocidades)
 
 # Serviço de determinação das energias
-result_energias = energias_vazao_rendimentos(result_velocidades, mi, Ep, d_ext, d_int, beta4, rho, mponto_f, n_m)
+result_energias = energias_vazao_rendimentos(result_velocidades,mi, Ep, d_ext, d_int, beta4, rho, mponto_f, k, n_m)
 print(result_energias)
 
 
